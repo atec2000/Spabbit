@@ -1,9 +1,8 @@
-package com.javasampleapproach.rabbitmq.consumer;
+package com.spabbit.consumer.consumer;
 
+import com.spabbit.common.event.model.Company;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
-
-import com.javasampleapproach.rabbitmq.model.Company;
 
 @Component
 public class Consumer {
@@ -12,4 +11,5 @@ public class Consumer {
     public void recievedMessage(Company company) {
         System.out.println("Recieved Message: " + company);
     }
+
 }

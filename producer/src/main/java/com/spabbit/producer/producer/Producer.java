@@ -1,11 +1,10 @@
-package com.javasampleapproach.rabbitmq.producer;
+package com.spabbit.producer.producer;
 
+import com.spabbit.common.event.model.Company;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import com.javasampleapproach.rabbitmq.model.Company;
 
 @Component
 public class Producer {

@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ProducerController {
+public class EventController {
 	
-    private static final Logger LOG = LoggerFactory.getLogger(ProducerController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(EventController.class);
 
     @Autowired
     Producer producer;
 
-    @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/events", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
     public void create(@RequestBody Company company) {
         LOG.debug(Company.class.getSimpleName() + " request received");

@@ -1,0 +1,28 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: producer
+  rabbitmq:
+    host: my-rabbit
+    username: guest
+    password: guest
+
+jsa:
+  rabbitmq:
+    exchange: jsa.exchange
+    queue: jsa.queue
+    routingkey: jsa.routingkey
+
+logging:
+  file: jsa-app.log
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.spabbit: DEBUG
+    
+info:
+  app:
+    name: spabbit - producer
+    description: spabbit - producer

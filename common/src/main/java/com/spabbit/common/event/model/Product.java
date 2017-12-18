@@ -1,4 +1,4 @@
-package com.javasampleapproach.rabbitmq.model;
+package com.spabbit.common.event.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

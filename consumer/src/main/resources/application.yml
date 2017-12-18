@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: consumer
+  rabbitmq:
+    host: my-rabbit
+    username: guest
+    password: guest
+
+jsa:
+  rabbitmq:
+    queue: jsa.queue
+
+logging:
+  file: jsa-app.log
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.spabbit: DEBUG
+    
+info:
+  app:
+    name: spabbit - consumer
+    description: spabbit - consumer

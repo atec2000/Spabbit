@@ -1,4 +1,4 @@
-package com.javasampleapproach.rabbitmq.config;
+package com.spabbit.producer.config;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Binding;

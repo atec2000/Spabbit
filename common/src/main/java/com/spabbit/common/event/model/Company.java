@@ -1,4 +1,4 @@
-package com.javasampleapproach.rabbitmq.model;
+package com.spabbit.common.event.model;
 
 import java.util.List;
 
