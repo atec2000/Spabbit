@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+
+  my-rabbit:
+    container_name: my-rabbit
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_NODENAME: my-rabbit
+
+  producer:
+    container_name: producer
+    image: spabbit/producer
+    ports:
+     - "8080:8080"
+    depends_on:
+     - my-rabbit
+         
+  consumer:
+    container_name: consumer
+    image: spabbit/consumer
+    depends_on:
+     - my-rabbit
