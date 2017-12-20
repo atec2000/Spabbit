@@ -9,6 +9,11 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    volumes:
+      - ./rabbitmq:/etc/rabbitmq
+#    volumes:
+#      - ./definitions.json:/etc/rabbitmq/definitions.json:ro
+#      - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
